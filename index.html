@@ -40,16 +40,18 @@
         <input type="text" id="hidden-input" style="opacity: 0; position: absolute; z-index: -1;">
         
         <div id="display-area"></div>
+        
+        <!-- 법인명 추가 -->
+        <p style="margin-top: 20px; font-size: 14px; color: #888;">
+            © 2026 Lotus AI Intensive Inc.
+        </p>
     </div>
 
     <script>
         const input = document.getElementById('hidden-input');
         const display = document.getElementById('display-area');
 
-        // 상자 클릭 시 입력창 활성화
         display.addEventListener('click', () => input.focus());
-
-        // 입력 시 화면 반영
         input.addEventListener('input', () => {
             display.innerText = input.value;
         });
